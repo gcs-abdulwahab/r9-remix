@@ -2,6 +2,7 @@ import type { MetaFunction } from "@remix-run/node";
 import MySlot from "~/MySlot";
 import { NavLink, useLoaderData } from "@remix-run/react";
 
+
 export const meta: MetaFunction = () => {
 	return [
 		{ title: "New Remix App" },
@@ -17,8 +18,13 @@ export default function Index() {
 	return (
 		<div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
       <MySlot title={title} description={description} />
-      <a href="/second">Go to second page using anchor tag</a>
-      <NavLink to="/second">Go to second page using NavLink</NavLink>
+			<a href="/second">Go to second page using anchor tag</a>
+			<br /><br />
+			<NavLink to="/second">Go to second page using NavLink</NavLink>
+			
+			<Image src={url} alt="something useful here" width={500} height={500} />
+
+
 		</div>
 	);
 }
